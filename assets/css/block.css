@@ -1,0 +1,231 @@
+/**
+ * Styles for SAM Newsletter Block
+ * Both editor and frontend styles
+ */
+
+/* Editor Styles */
+.sam-newsletter-block-editor {
+    background: #f0f0f1;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.sam-newsletter-preview {
+    text-align: center;
+}
+
+.sam-newsletter-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.sam-newsletter-preview h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.sam-newsletter-preview p {
+    margin: 0 0 20px;
+    color: #646970;
+}
+
+.sam-newsletter-preview-form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.preview-field {
+    margin-bottom: 15px;
+}
+
+.preview-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.preview-field input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.preview-button {
+    width: 100%;
+    padding: 10px 20px;
+    background: #2271b1;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: not-allowed;
+}
+
+/* Frontend Styles */
+.sam-newsletter-form-wrapper {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.sam-newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sam-newsletter-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.sam-newsletter-field label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 700;
+    color: var(--text-dark);
+    font-size: 15px;
+}
+
+.sam-newsletter-field .required {
+    color: #dc2626;
+}
+.sam-newsletter-field input {
+    width: 100% !important;
+    padding: 16px 20px !important;
+    border: 2px solid var(--border) !important;
+    border-radius: 12px !important;
+    font-size: 16px !important;
+    transition: all 0.3s;
+    font-family: 'Lexend', sans-serif !important;
+    background: var(--bg-light) !important;
+}
+
+.sam-newsletter-field input:focus {
+    outline: none;
+    border-color: var(--primary) !Important;
+    background: white  !Important;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1)  !Important;
+}
+
+.sam-newsletter-field input.error {
+    border-color: #dc2626;
+}
+
+.sam-newsletter-field input.error:focus {
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.sam-newsletter-error {
+    display: none;
+    margin-top: 6px;
+    font-size: 13px;
+    color: #dc2626;
+}
+
+ .sam-newsletter-submit {
+    width: 100%;
+    padding: 20px !important;
+    background: var(--gradient-primary)  !important;
+    color: white  !important;
+    border: 2px solid transparent  !important;
+    border-radius: 12px  !important;
+    font-size: 18px  !important;
+    font-weight: 700 !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Lexend', sans-serif  !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 48px;
+}
+
+
+.sam-newsletter-submit:hover {
+    background: white  !important;
+    color: var(--primary) !important;
+    border-color: var(--primary)  !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3)  !important;
+}
+.sam-newsletter-submit:active {
+    transform: translateY(0);
+}
+
+.sam-newsletter-submit:disabled {
+    background: var(--gradient-primary)  !important;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.sam-newsletter-message {
+    display: none;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.sam-newsletter-message.success {
+    background: #d1fae5;
+    color: #065f46;
+    border: 1px solid #6ee7b7;
+}
+
+.sam-newsletter-message.error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+}
+
+.sam-newsletter-message .dashicons {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sam-newsletter-form-wrapper {
+        padding: 20px;
+        margin: 20px 10px;
+    }
+    
+    .sam-newsletter-field input {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+}
+
+/* Dark Mode Support (Optional) */
+@media (prefers-color-scheme: dark) {
+    .sam-newsletter-form-wrapper {
+        background: #1f2937;
+        border-color: #374151;
+    }
+    
+    .sam-newsletter-field label {
+        color: #e5e7eb;
+    }
+    
+    .sam-newsletter-field input {
+        background: #111827;
+        border-color: #4b5563;
+        color: #e5e7eb;
+    }
+    
+    .sam-newsletter-field input:focus {
+        border-color: #3b82f6;
+    }
+}
